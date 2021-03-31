@@ -1,10 +1,17 @@
 function translator(string) {
-  const vol=["a","e","i","o","u"];
-  for (let i=0; i<vol.length; i++) {
-    if (vol[i] === string) {
-      return true;
-    };
+  const vowel=["a","e","i","o","u"];
+  const word= string.split("");
+  for (let index=0; index<vowel.length; index++) {
+    if (vowel[index] === word[0]) {
+      word.push("way");
+      // word.join('');
+      
+      return word.join('');
+    } else {
+      return false
+    }
   }
-  console.log("checked")
+  
 }
+
 
